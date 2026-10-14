@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدراسة الأولية والتصويت التشاركي - جمعية البر بالأحساء 2027</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1b4332',
+                            primary: '#2d6a4f',
+                            medium: '#40916c',
+                            emerald: '#52b788',
+                            gold: '#d4af37',
+                            lightGold: '#fef9e7',
+                            softBg: '#f8f9fa'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #f8f9fa; }
+        .header-bg { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 70%, #081c15 100%); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 4px; }
+        @media print { .no-print { display: none !important; } }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Top Header -->
+    <header class="header-bg text-white relative overflow-hidden border-b-4 border-brand-gold shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-5 text-center md:text-right">
+                    <div class="w-20 h-20 rounded-2xl bg-white p-2 shadow-lg flex items-center justify-center border-2 border-brand-gold/50 shrink-0 overflow-hidden">
+                        <img src="logo.png" alt="شعار جمعية البر بالأحساء" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold mb-2 border border-brand-gold/30">
+                            <i class="fa-solid fa-chart-pie"></i> لوحة التحليل التشاركي والمقترحات
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-tajawal">
+                            دراسة التصويت والمقترحات الميدانية لعام 2027م
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full space-y-8">
+        
+        <!-- KPI Summary Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-emerald-50 text-brand-primary flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-building-user"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500 font-bold">المراكز المشاركة</p>
+                    <h3 class="text-2xl font-extrabold text-brand-dark mt-1">6 مراكز</h3>
+                    <span class="text-[11px] text-emerald-600 font-semibold">المزروعية، الفيصلية، المبرز، الصالحية، حي الملك فهد، النجاح</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-amber-50 text-brand-gold flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500 font-bold">جهات التصويت والمشاركون</p>
+                    <h3 class="text-2xl font-extrabold text-brand-dark mt-1">26 مصوتاً</h3>
+                    <span class="text-[11px] text-gray-500 font-semibold">مدراء، ومشرفو مشاريع، ومستفيدون</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500 font-bold">إجمالي المشاريع الأساسية</p>
+                    <h3 class="text-2xl font-extrabold text-brand-dark mt-1">114 مشروعاً</h3>
+                    <span class="text-[11px] text-blue-600 font-semibold">موزعة على المبادرات الاستراتيجية</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-500 font-bold">البرامج المقترحة إضافياً</p>
+                    <h3 class="text-2xl font-extrabold text-brand-dark mt-1">21 مقترحاً</h3>
+                    <span class="text-[11px] text-purple-600 font-semibold">واردة من احتياجات الميدان الفعلية</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1: Proposed Programs from Field (المقترحات الجديدة) -->
+        <section class="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+            <div class="p-5 bg-gradient-to-r from-brand-dark to-brand-primary text-white flex justify-between items-center">
+                <h3 class="text-lg font-bold font-tajawal flex items-center gap-2">
+                    <i class="fa-solid fa-star text-brand-gold"></i>
+                    <span>أولاً: المقترحات والبرامج الجديدة الإضافية الواردة من الميدان لعام 2027م</span>
+                </h3>
+                <span class="text-xs bg-brand-gold text-brand-dark px-3 py-1 rounded-full font-bold">مقترحات الميدان</span>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 text-sm mb-4">هذه قائمة بالبرامج والمبادرات التي اقترحها مديرو المراكز والمشرفون والمستفيدون لتضاف إلى خطة 2027م تلبية للاحتياجات الفعلية:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="proposalsGrid">
+                    <!-- تُعبأ برمجياً -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Controls for Main Table -->
+        <section class="bg-white rounded-2xl shadow-md p-5 border border-gray-100 flex flex-col sm:flex-row gap-4 justify-between items-center">
+            <div class="relative w-full sm:w-96">
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" id="searchVoting" oninput="filterTable()" placeholder="ابحث في جدول المشاريع والبرامج..." 
+                       class="w-full pl-4 pr-12 py-2.5 rounded-xl border border-gray-200 focus:border-brand-primary outline-none text-sm font-medium">
+            </div>
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+                <span id="rowCountIndicator" class="text-xs font-bold px-3 py-2 rounded-xl bg-brand-softBg text-brand-dark">جاري التحميل...</span>
+                <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-brand-primary text-white font-bold text-sm hover:bg-brand-dark transition no-print flex items-center gap-2">
+                    <i class="fa-solid fa-print"></i> <span>طباعة التقرير</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Voting Table -->
+        <section class="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+            <div class="p-5 bg-gray-100 text-brand-dark flex justify-between items-center border-b">
+                <h3 class="text-lg font-bold font-tajawal flex items-center gap-2">
+                    <i class="fa-solid fa-table-cells text-brand-primary"></i>
+                    <span>ثانياً: الجدول التفصيلي لجميع المشاريع وأصوات المراكز</span>
+                </h3>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-right border-collapse text-xs sm:text-sm">
+                    <thead>
+                        <tr class="bg-brand-softBg text-brand-dark font-bold border-b border-gray-200">
+                            <th class="p-4 sticky right-0 bg-brand-softBg z-10 border-l min-w-[280px]">اسم البرنامج / المشروع</th>
+                            <th class="p-4 border-l text-center">تصويت الإدارة</th>
+                            <th class="p-4 text-center border-l bg-emerald-50" colspan="4">مركز المزروعية</th>
+                            <th class="p-4 text-center border-l bg-blue-50" colspan="4">مركز الفيصلية</th>
+                            <th class="p-4 text-center border-l bg-amber-50" colspan="6">مركز المبرز</th>
+                            <th class="p-4 text-center border-l bg-emerald-50" colspan="4">مركز الصالحية</th>
+                            <th class="p-4 text-center border-l bg-purple-50" colspan="4">مركز حي الملك فهد</th>
+                            <th class="p-4 text-center border-l bg-teal-50" colspan="4">مركز النجاح</th>
+                        </tr>
+                    </thead>
+                    <tbody id="votingTableBody" class="divide-y divide-gray-100">
+                        <!-- تُعبأ برمجياً -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark text-white py-6 mt-12 border-t-2 border-brand-gold text-center text-xs sm:text-sm">
+        <p>جميع الحقوق محفوظة © جمعية البر بالأحساء - إدارة الاستثمار والبرامج التنموية 2027م</p>
+    </footer>
+
+    <script>
+        const votingData = [
+            { "project": "المهارات الأساسية - دورات القدرات.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - دورات التحصيلي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - التقوية الدراسية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - المتفوقون أكاديميًا.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": false },
+            { "project": "المهارات الأساسية - نسبة الملتحقون بالجامعة.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": false },
+            { "project": "المهارات الأساسية - الحاصلون على جوائز.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": false },
+            { "project": "المهارات الأساسية - برنامج التمكين التعليمي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - برنامج اللغة الإنجليزية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - ورشة عمل الإلقاء والتحدث.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - ورشة عمل المتحدث الصغير.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - ورشة عمل في القراءة والكتابة الإبداعية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - ورشة عمل ميزانية الأسرة.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - برنامج تدبير الأموال.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "المهارات الأساسية - التأهيل الى سوق العمل.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - التفكير النقدي وحل المشكلات.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - برنامج السبت الاثرائي (درون).", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - برنامج توازن.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - المهارات التقنية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - برنامج الأمن السيبراني.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - ورش عمل في الذكاء الاصطناعي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - ورشة عمل في التصوير الرقمي والاحترافي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - ورش عمل في مهارات الحاسب الآلي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - لغات البرمجة.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - دورة تدريبية المحتوى الرقمي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - التواصل والتنسيق.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - الابداع والابتكار.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مهارات القرن 21 - التعلم مدى الحياة.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - برنامج ابداها صح.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - برنامج ساعات بحثية في العلاج النفسي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - ورشة عمل توعوية في يوم السكري.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - ورشة عمل الاسعافات الأولية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - ورشة عمل توعوية لمكافحة التدخين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - مبادرة استشارة مجانية مع مستشارة معتمدة.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - برنامج الطريقة السليمة للعناية بصحة الفم و الأسنان.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "جنة: العادات الصحية - المناشط الرياضية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة الابتكار والريادة - مصنع الشركات الناشئة (المشاريع الصغيرة للأعمال).", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الاستثمار بدل المنح - تشكيل النحاسيات.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الاستثمار بدل المنح - ورشة عمل تصميم الاكسسوارات.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الاستثمار بدل المنح - دورة تدريبية تصنيع العطور.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الاستثمار بدل المنح - ورشة عمل صناعة المخبوزات وتوريدها للمقاهي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الاستثمار بدل المنح - ورشة عمل صيانة الأجهزة الذكية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الاستثمار بدل المنح - دورة تدريبية فن تنسيق الزهور.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الاستثمار بدل المنح - دورة تدريبية فنون الخياطة والتطريز.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - ورشة عمل في التجميل وفن المكياج.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - دورة تدريبية الضيافة وتنسيق الحفلات.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - ورشة عمل صناعة البشت الحساوي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - برنامج منتج فني ومعلن في ساعة.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - ورشة عمل صناعة الجبسيات.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - ورشة عمل صناعة الجلديات وتطريزها.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - معرض الأسر المنتجة.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأسر المنتجة والحرف - دورة تدريبية التسويق والتأهيل لسوق العمل.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل الحر - برنامج التربية التقنية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل الحر - دورة تدريبية كفاءات في سوق العمل.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل الحر - ورشة عمل استخدام المنصات الحكومية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل الحر - دورة تدريبية خبير تصليح الأجهزة الإلكترونية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة بناء القدرات - تخصصات المستقبل: ورشة عمل اختيار التخصص الجامعي لطلاب المرحلة الثانوية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة بناء القدرات - ورشة عمل/ مبادرة دبلوم المتوسط المهني (جامعة الملك فيصل).", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - دورة تدريبية التدريب المهني.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - ورشة عمل التعريف بسوق العمل.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - دورة تدريبية فن الكابوتونية وتصميم الخداديات.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - دورة تدريبية فن صناعة الشموع.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - دورة تدريبية فن وتكنولوجيا صناعة العطور: من الفكرة إلى المنتج النهائي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - مبادرة وظفني.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - ورش عمل لتمكين الأيادي السعودية على الإنتاج.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التمهين - برنامج إشراقة لدعم الأيادي السعودية على التسويق.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "زمالة تكامل - مسابقة قيادي متألق.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "زمالة تكامل - مسابقة جائزة طموح.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأندية والتصنيفات - برنامج الفرص التطوعية ومنصة التطوع.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأندية والتصنيفات - برنامج كالجسد الواحد.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأندية والتصنيفات - مبادرة ملتقى الأحساء التطوعي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الأندية والتصنيفات - مبادرة هاكثون التطوع الاحترافي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة النمو والتميز - الاحتفاء بيوم العلم السعودي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة النمو والتميز - حفل تكريم المتفوقين من أبناء المستفيدين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة النمو والتميز - حفل تكريم المتبرعين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة النمو والتميز - حفل سفراء العطاء حفل تكريم الداعمين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة النمو والتميز - حفل البرنامج الشامل لتكريم المتفوقين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "مبادرة النمو والتميز - برنامج أصالة الملبس.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التطوع الكامل - مبادرة إطمئن.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التطوع الكامل - مبادرة التشجير.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "التطوع الكامل - ورشة عمل الأعمال الحرفية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل مع المؤسسات الكبرى - برنامج الدواء والغذاء.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل مع المؤسسات الكبرى - برنامج الوقاية من العدوى الحيوانية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل مع المؤسسات الكبرى - التوعية بأهمية الكشف عن سرطان الثدي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل مع المؤسسات الكبرى - مبادرة حملة تطعيم ضد الانفلونزا الموسمية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "العمل مع المؤسسات الكبرى - مبادرة حملة التبرع بالدم.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "بيت خبرة وأبحاث - مشروع التسويق الرقمي للأسر المنتجة.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "بيت خبرة وأبحاث - برنامج اليوم العالمي للتصلب اللويحي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "بيت خبرة وأبحاث - ورشة عمل في كيفية التعامل مع المراهقين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "بيت خبرة وأبحاث - مسابقة افضل ابتكار علمي أو مهني او يدوي.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "بيت خبرة وأبحاث - ورشة عمل الذكاء الاجتماعي وأثرة في بيئة العمل.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "بيت خبرة وأبحاث - مسابقة اليوم الوطني.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "بيت خبرة وأبحاث - مشروع دعم الصيانة المنزلية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - حفل التفوق.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - حفل تكريم المتطوعين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - حفل تكريم المتفوقين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - مسابقة بطولة رمضان الرياضية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - مسابقة جائزة البيت الجميل.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - مسابقة الأسرة المثالية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - مسابقة الوفاء والولاء للوطن.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - مسابقة يوم التأسيس.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            { "project": "الجوائز والمسابقات العالمية - معرض تعريفي بالاسر المنتجة والاسر الريفية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": false },
+            
+            // --- المقترحات الميدانية الإضافية ---
+            { "project": "منصة قبول الجامعي", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "السيرة الذاتية والمقابلات الشخصية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "فرص للاستفادة من منتجات بنك التنمية الاجتماعية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "التطوع الاحترافي.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": true },
+            { "project": "إدارة المتاجر الإلكترونية.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": true },
+            { "project": "تقديم استشارات قانونية مجانية للمستفيد.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "تقديم محاضرة توعوية عن الحقوق والوصايا الأسرية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "دورة تدريبية في التصميم والجرافيكس.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "دورة تدريبية في تصميم المخططات المعمارية.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": true },
+            { "project": "دورة تدريبية في تصميم الديكورات وتنسيق الأثاث.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": true },
+            { "project": "دورة في أنماط الشخصية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "دورة في استثمار الوقت.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "معرض عن الفرص الوظيفية.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": true },
+            { "project": "مبادرة استشارات نفسية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "مبادرة استشارات تعليمية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "برنامج مكافاءات المتطوعين المسجلين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "برنامج تطوير الموظفين.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "برنامج تعريفي لتطوير المتطوعين الجدد.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "برنامج صناع الحلا.", "adminVote": "لا", "maz1": "لا", "maz2": "لا", "maz3": "لا", "maz4": "لا", "fais1": "لا", "fais2": "لا", "fais3": "لا", "fais4": "لا", "mub1": "لا", "mub2": "لا", "mub3": "لا", "mub4": "لا", "mub5": "لا", "mub6": "لا", "sal1": "لا", "sal2": "لا", "sal3": "لا", "sal4": "لا", "fahd1": "لا", "fahd2": "لا", "fahd3": "لا", "fahd4": "لا", "naj1": "لا", "naj2": "لا", "naj3": "لا", "naj4": "لا", "isProposal": true },
+            { "project": "دورة الباريستا الاحترافية.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true },
+            { "project": "اللقاء السنوي للموظفين والموظفات بين الفروع.", "adminVote": "نعم", "maz1": "نعم", "maz2": "نعم", "maz3": "نعم", "maz4": "نعم", "fais1": "نعم", "fais2": "نعم", "fais3": "نعم", "fais4": "نعم", "mub1": "نعم", "mub2": "نعم", "mub3": "نعم", "mub4": "نعم", "mub5": "نعم", "mub6": "نعم", "sal1": "نعم", "sal2": "نعم", "sal3": "نعم", "sal4": "نعم", "fahd1": "نعم", "fahd2": "نعم", "fahd3": "نعم", "fahd4": "نعم", "naj1": "نعم", "naj2": "نعم", "naj3": "نعم", "naj4": "نعم", "isProposal": true }
+        ];
+
+        function renderProposals() {
+            const grid = document.getElementById('proposalsGrid');
+            grid.innerHTML = '';
+            const proposals = votingData.filter(item => item.isProposal);
+            
+            proposals.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = "bg-brand-softBg p-4 rounded-xl border border-gray-200 flex items-center justify-between";
+                const isApproved = item.adminVote === 'نعم';
+                card.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-brand-primary text-white flex items-center justify-center text-xs font-bold">${index + 1}</span>
+                        <span class="text-xs font-bold text-brand-dark">${item.project}</span>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-bold ${isApproved ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'}">${item.adminVote}</span>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function renderVotingTable(data) {
+            const tbody = document.getElementById('votingTableBody');
+            const indicator = document.getElementById('rowCountIndicator');
+            tbody.innerHTML = '';
+
+            const mainProjects = data.filter(item => !item.isProposal);
+
+            if (mainProjects.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="32" class="text-center py-8 text-gray-500 font-semibold">لا توجد بيانات مطابقة للبحث</td></tr>`;
+                indicator.innerText = '0 مشروع';
+                return;
+            }
+
+            indicator.innerText = `عرض ${mainProjects.length} مشروعاً أساسياً`;
+
+            mainProjects.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-brand-softBg/40 transition";
+                
+                const getBadge = (val) => {
+                    if (!val) return '<span class="text-gray-300">-</span>';
+                    const v = String(val).trim();
+                    if (v === 'نعم') return '<span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs">نعم</span>';
+                    if (v === 'لا') return '<span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 font-bold text-xs">لا</span>';
+                    return `<span class="text-gray-700">${v}</span>`;
+                };
+
+                tr.innerHTML = `
+                    <td class="p-3.5 sticky right-0 bg-white font-bold text-brand-dark border-l shadow-sm">${row.project}</td>
+                    <td class="p-3.5 text-center border-l font-semibold">${getBadge(row.adminVote)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.maz1)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.maz2)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.maz3)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.maz4)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fais1)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fais2)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fais3)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fais4)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.mub1)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.mub2)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.mub3)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.mub4)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.mub5)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.mub6)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.sal1)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.sal2)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.sal3)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.sal4)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fahd1)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fahd2)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fahd3)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.fahd4)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.naj1)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.naj2)}</td>
+                    <td class="p-3.5 text-center border-l">${getBadge(row.naj3)}</td>
+                    <td class="p-3.5 text-center">${getBadge(row.naj4)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterTable() {
+            const query = document.getElementById('searchVoting').value.trim().toLowerCase();
+            const filtered = votingData.filter(item => (item.project || '').toLowerCase().includes(query));
+            renderVotingTable(filtered);
+        }
+
+        window.onload = function() {
+            renderProposals();
+            renderVotingTable(votingData);
+        };
+    </script>
+</body>
+</html>
