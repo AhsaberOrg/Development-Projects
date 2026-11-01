@@ -285,15 +285,6 @@
     <script>
         let filteredPrograms = [];
 
-        function normalizeArabic(text) {
-            if (!text) return '';
-            return text
-                .replace(/[\u064b-\u065f]/g, '')
-                .replace(/[إأآٱ]/g, 'ا')
-                .replace(/ة/g, 'ه')
-                .toLowerCase();
-        }
-
         function renderPrograms(data) {
             const grid = document.getElementById('programsGrid');
             const noResults = document.getElementById('noResults');
@@ -353,26 +344,18 @@
         }
 
         function applyFilters() {
-            const rawSearchVal = document.getElementById('searchInput').value.trim();
-            const searchVal = normalizeArabic(rawSearchVal);
+            const searchVal = document.getElementById('searchInput').value.trim().toLowerCase();
             const initVal = document.getElementById('initiativeFilter').value;
             const targetVal = document.getElementById('targetFilter').value;
 
             filteredPrograms = programsData.filter(p => {
-                const titleNorm = normalizeArabic(p.title);
-                const descNorm = normalizeArabic(p.description);
-                const catNorm = normalizeArabic(p.category);
-                const reasonsNorm = Array.isArray(p.reasons) ? p.reasons.map(r => normalizeArabic(r)).join(' ') : normalizeArabic(p.reasons);
-                const objectivesNorm = Array.isArray(p.objectives) ? p.objectives.map(o => normalizeArabic(o)).join(' ') : normalizeArabic(p.objectives);
-                const outputsNorm = Array.isArray(p.outputs) ? p.outputs.map(o => normalizeArabic(o)).join(' ') : normalizeArabic(p.outputs);
-
-                const matchesSearch = !searchVal || 
-                                      titleNorm.includes(searchVal) || 
-                                      descNorm.includes(searchVal) ||
-                                      catNorm.includes(searchVal) ||
-                                      reasonsNorm.includes(searchVal) ||
-                                      objectivesNorm.includes(searchVal) ||
-                                      outputsNorm.includes(searchVal);
+                // تحويل مصفوفة المبررات إلى نص للبحث فيها بأمان
+                const reasonsText = Array.isArray(p.reasons) ? p.reasons.join(' ').toLowerCase() : (p.reasons || '').toLowerCase();
+                
+                const matchesSearch = p.title.toLowerCase().includes(searchVal) || 
+                                      p.description.toLowerCase().includes(searchVal) ||
+                                      p.category.toLowerCase().includes(searchVal) ||
+                                      reasonsText.includes(searchVal);
                 
                 const matchesInitiative = (initVal === 'ALL') || (p.category === initVal);
                 
