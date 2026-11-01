@@ -285,103 +285,6 @@
     <script>
         let filteredPrograms = [];
 
-        // تعريف الدوال في النطاق العام (Global Scope) لضمان عمل أزرار الـ HTML بشكل مباشر
-        window.openModal = function(id) {
-            const program = programsData.find(p => p.id === Number(id));
-            if (!program) return;
-
-            document.getElementById('modalTitle').innerText = program.title;
-            document.getElementById('modalCategory').innerText = program.category;
-            document.getElementById('modalTarget').innerText = `المستهدفون: ${program.target}`;
-            document.getElementById('modalCategoryDetail').innerText = program.category;
-            document.getElementById('modalTargetDetail').innerText = program.target;
-            
-            document.getElementById('modalDescription').innerText = program.description || '-';
-            document.getElementById('modalReasons').innerText = program.reasons || '-';
-
-            const objList = document.getElementById('modalObjectives');
-            objList.innerHTML = '';
-            (program.objectives || []).forEach(obj => {
-                const li = document.createElement('li');
-                li.className = "flex items-start gap-2";
-                li.innerHTML = `<i class="fa-solid fa-check text-brand-emerald mt-1 text-xs"></i> <span>${obj}</span>`;
-                objList.appendChild(li);
-            });
-
-            const kpiList = document.getElementById('modalKPIs');
-            kpiList.innerHTML = '';
-            (program.kpis || []).forEach(kpi => {
-                const li = document.createElement('li');
-                li.className = "flex items-start gap-2";
-                li.innerHTML = `<i class="fa-solid fa-chart-simple text-brand-gold mt-1 text-xs"></i> <span>${kpi}</span>`;
-                kpiList.appendChild(li);
-            });
-
-            const outputsContainer = document.getElementById('modalOutputs');
-            outputsContainer.innerHTML = '';
-            (program.outputs || []).forEach(out => {
-                const div = document.createElement('div');
-                div.className = "bg-white p-3 rounded-xl border border-brand-gold/20 flex items-center gap-2.5 shadow-sm";
-                div.innerHTML = `<i class="fa-solid fa-star text-brand-gold text-sm"></i> <span>${out}</span>`;
-                outputsContainer.appendChild(div);
-            });
-
-            const modal = document.getElementById('programModal');
-            const container = document.getElementById('modalContainer');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                container.classList.remove('scale-95', 'opacity-0');
-                container.classList.add('scale-100', 'opacity-100');
-            }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        window.closeModal = function() {
-            const modal = document.getElementById('programModal');
-            const container = document.getElementById('modalContainer');
-            container.classList.remove('scale-100', 'opacity-100');
-            container.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }, 200);
-        }
-
-        window.applyFilters = function() {
-            const searchVal = document.getElementById('searchInput').value.trim().toLowerCase();
-            const initVal = document.getElementById('initiativeFilter').value;
-            const targetVal = document.getElementById('targetFilter').value;
-
-            filteredPrograms = programsData.filter(p => {
-                const matchesSearch = p.title.toLowerCase().includes(searchVal) || 
-                                      p.description.toLowerCase().includes(searchVal) ||
-                                      p.category.toLowerCase().includes(searchVal) ||
-                                      p.reasons.toLowerCase().includes(searchVal);
-                
-                const matchesInitiative = (initVal === 'ALL') || (p.category === initVal);
-                
-                let matchesTarget = true;
-                if (targetVal !== 'ALL') {
-                    if (targetVal === 'الأسرة') {
-                        matchesTarget = (p.target === 'الأسرة');
-                    } else {
-                        matchesTarget = (p.target.includes(targetVal));
-                    }
-                }
-
-                return matchesSearch && matchesInitiative && matchesTarget;
-            });
-
-            renderPrograms(filteredPrograms);
-        }
-
-        window.resetFilters = function() {
-            document.getElementById('searchInput').value = '';
-            document.getElementById('initiativeFilter').value = 'ALL';
-            document.getElementById('targetFilter').value = 'ALL';
-            applyFilters();
-        }
-
         function renderPrograms(data) {
             const grid = document.getElementById('programsGrid');
             const noResults = document.getElementById('noResults');
@@ -438,6 +341,102 @@
                 `;
                 grid.appendChild(card);
             });
+        }
+
+        function applyFilters() {
+            const searchVal = document.getElementById('searchInput').value.trim().toLowerCase();
+            const initVal = document.getElementById('initiativeFilter').value;
+            const targetVal = document.getElementById('targetFilter').value;
+
+            filteredPrograms = programsData.filter(p => {
+                const matchesSearch = p.title.toLowerCase().includes(searchVal) || 
+                                      p.description.toLowerCase().includes(searchVal) ||
+                                      p.category.toLowerCase().includes(searchVal) ||
+                                      p.reasons.toLowerCase().includes(searchVal);
+                
+                const matchesInitiative = (initVal === 'ALL') || (p.category === initVal);
+                
+                let matchesTarget = true;
+                if (targetVal !== 'ALL') {
+                    if (targetVal === 'الأسرة') {
+                        matchesTarget = (p.target === 'الأسرة');
+                    } else {
+                        matchesTarget = (p.target.includes(targetVal));
+                    }
+                }
+
+                return matchesSearch && matchesInitiative && matchesTarget;
+            });
+
+            renderPrograms(filteredPrograms);
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('initiativeFilter').value = 'ALL';
+            document.getElementById('targetFilter').value = 'ALL';
+            applyFilters();
+        }
+
+        function openModal(id) {
+            const program = programsData.find(p => p.id === id);
+            if (!program) return;
+
+            document.getElementById('modalTitle').innerText = program.title;
+            document.getElementById('modalCategory').innerText = program.category;
+            document.getElementById('modalTarget').innerText = `المستهدفون: ${program.target}`;
+            document.getElementById('modalCategoryDetail').innerText = program.category;
+            document.getElementById('modalTargetDetail').innerText = program.target;
+            
+            document.getElementById('modalDescription').innerText = program.description || '-';
+            document.getElementById('modalReasons').innerText = program.reasons || '-';
+
+            const objList = document.getElementById('modalObjectives');
+            objList.innerHTML = '';
+            (program.objectives || []).forEach(obj => {
+                const li = document.createElement('li');
+                li.className = "flex items-start gap-2";
+                li.innerHTML = `<i class="fa-solid fa-check text-brand-emerald mt-1 text-xs"></i> <span>${obj}</span>`;
+                objList.appendChild(li);
+            });
+
+            const kpiList = document.getElementById('modalKPIs');
+            kpiList.innerHTML = '';
+            (program.kpis || []).forEach(kpi => {
+                const li = document.createElement('li');
+                li.className = "flex items-start gap-2";
+                li.innerHTML = `<i class="fa-solid fa-chart-simple text-brand-gold mt-1 text-xs"></i> <span>${kpi}</span>`;
+                kpiList.appendChild(li);
+            });
+
+            const outputsContainer = document.getElementById('modalOutputs');
+            outputsContainer.innerHTML = '';
+            (program.outputs || []).forEach(out => {
+                const div = document.createElement('div');
+                div.className = "bg-white p-3 rounded-xl border border-brand-gold/20 flex items-center gap-2.5 shadow-sm";
+                div.innerHTML = `<i class="fa-solid fa-star text-brand-gold text-sm"></i> <span>${out}</span>`;
+                outputsContainer.appendChild(div);
+            });
+
+            const modal = document.getElementById('programModal');
+            const container = document.getElementById('modalContainer');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                container.classList.remove('scale-95', 'opacity-0');
+                container.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('programModal');
+            const container = document.getElementById('modalContainer');
+            container.classList.remove('scale-100', 'opacity-100');
+            container.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 200);
         }
 
         window.onload = function() {
